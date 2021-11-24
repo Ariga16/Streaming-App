@@ -57,6 +57,4 @@
         app:layout_constraintTop_toTopOf="@id/imageView2"></TextView>
 
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

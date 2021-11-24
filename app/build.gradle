@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    // exo player
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
 
@@ -38,6 +45,10 @@ dependencies {
     // glide
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    // exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.9.6'
+    // round corner image view
+    implementation 'com.github.zjywill:roundedcornerimageview:1.1.0'
 
 
 

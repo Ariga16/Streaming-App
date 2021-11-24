@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_menu_icon"
+        android:padding="8dp"
+        android:tint="#000"
+        android:src="@drawable/home_24"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></ImageView>
+
+    <ImageView
+        android:src="@drawable/oval"
+        android:id="@+id/item_menu_selected"
+        android:layout_width="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="5dp"></ImageView>
+
+
+</LinearLayout>

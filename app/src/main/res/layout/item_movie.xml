@@ -8,15 +8,17 @@
     android:foreground="?attr/selectableItemBackgroundBorderless"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
+    <com.comix.rounded.RoundedCornerImageView
         android:id="@+id/item_movie_img"
         android:layout_width="0dp"
         android:layout_height="175dp"
         android:scaleType="centerCrop"
+        app:cornerRadius="5dp"
+        app:cornerColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_launcher_background"></ImageView>
+        android:src="@drawable/ic_launcher_background"></com.comix.rounded.RoundedCornerImageView>
 
     <TextView
         android:id="@+id/item_movie_title"
@@ -25,6 +27,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/colorAccent"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

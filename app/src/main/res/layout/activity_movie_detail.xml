@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <com.comix.rounded.RoundedCornerImageView
+            app:cornerRadius="8dp"
+            app:cornerTopDisable="true"
+            app:cornerColor="@color/colorPrimaryDark"
             android:id="@+id/detail_movie_cover"
             android:layout_width="wrap_content"
             android:layout_height="245dp"
@@ -19,23 +22,39 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/bat"></ImageView>
+            tools:src="@drawable/bat"></com.comix.rounded.RoundedCornerImageView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/play_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_play_arrow_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@id/detail_movie_cover"
+            app:layout_constraintEnd_toEndOf="@id/detail_movie_cover"
+            app:layout_constraintStart_toStartOf="@id/detail_movie_cover"
+            app:layout_constraintTop_toTopOf="@id/detail_movie_cover"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 
-        <ImageView
-            android:transitionName="SharedName"
+
+
+        <com.comix.rounded.RoundedCornerImageView
+            app:cornerTopDisable="true"
+            app:cornerRadius="5dp"
+            app:cornerColor="@color/colorPrimaryDark"
             android:id="@+id/detail_movie_img"
             android:layout_width="125dp"
             android:layout_height="175dp"
-            android:scaleType="centerCrop"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/omenlogo"
+            android:transitionName="SharedName"
             app:layout_constraintBottom_toBottomOf="@id/detail_movie_cover"
-            app:layout_constraintTop_toBottomOf="@id/detail_movie_cover"
-            android:src="@drawable/omenlogo"></ImageView>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_cover"></com.comix.rounded.RoundedCornerImageView>
 
         <TextView
             android:id="@+id/detail_movie_title"
@@ -53,21 +72,46 @@
             app:layout_constraintTop_toBottomOf="@+id/detail_movie_cover"></TextView>
 
         <TextView
-            android:textColor="@color/cardview_light_background"
             android:id="@+id/detail_movie_desc"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="@string/simple_text"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:lineSpacingExtra="8dp"
+            android:text="@string/simple_text"
+            android:textColor="@color/cardview_light_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_movie_img"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_img"></TextView>
+
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content">
-        </TextView>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/text_bg_blue"
+            android:padding="16dp"
+            android:text="Cast"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_desc"
+            app:layout_constraintVertical_bias="0.050000012"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cast"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
